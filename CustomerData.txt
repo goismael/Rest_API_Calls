@@ -1,0 +1,23 @@
+{   
+      "id": "@rank",
+      "name": "@name",
+      "username": "@userName",
+      "email": "@email",
+      "address": {
+        "street": "@street",
+        "suite": "@apt",
+        "city": "@city",
+        "zipcode": "@zip",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+             }
+                   }
+}	
+
+https://lingua-robot.p.rapidapi.com/language/v1/entries/en/
+
+home.openweathermap.org/api_keys
+
+ef241422a509cf471d6177fb6edc0b3b
+
