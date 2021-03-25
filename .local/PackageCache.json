@@ -181,6 +181,54 @@
         "C:\\Users\\ismae\\.nuget\\packages\\uipath.webapi.activities/1.6.0\\lib/net452/UiPath.Web.dll"
       ],
       "Path": "C:\\Users\\ismae\\.nuget\\packages\\uipath.webapi.activities\\1.6.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.Activities.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities/1.4.0\\lib/net452/UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities\\1.4.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Credentials.Activities",
+        "Version": "1.1.6479.13204"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\credentialmanagement/1.0.2\\lib/net35/CredentialManagement.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.credentials.activities/1.1.6479.13204\\lib/net40-client/UiPath.Credentials.Activities.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\uipath.credentials.activities\\1.1.6479.13204"
+    },
+    {
+      "Package": {
+        "Id": "EntityFramework",
+        "Version": "6.4.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\entityframework/6.4.4\\lib/net45/EntityFramework.SqlServer.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\entityframework/6.4.4\\lib/net45/EntityFramework.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\entityframework\\6.4.4"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.AspNet.DynamicData.EFProvider",
+        "Version": "6.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\entityframework/6.4.4\\lib/net45/EntityFramework.SqlServer.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\entityframework/6.4.4\\lib/net45/EntityFramework.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.dynamicdata.efprovider/6.0.0\\lib/net40/Microsoft.AspNet.DynamicData.EFProvider.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.entitydatasource/6.0.0\\lib/net40/Microsoft.AspNet.EntityDataSource.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.dynamicdata.efprovider\\6.0.0"
     }
   ],
   "Conflicts": [],
@@ -234,14 +282,24 @@
         }
       ]
     },
+    "CredentialManagement": {
+      "Id": "CredentialManagement",
+      "Version": "1.0.2",
+      "Dependencies": []
+    },
     "CsvHelper": {
       "Id": "CsvHelper",
-      "Version": "2.13.5",
+      "Version": "2.13.5.0",
       "Dependencies": []
     },
     "DocumentFormat.OpenXml": {
       "Id": "DocumentFormat.OpenXml",
-      "Version": "2.5.0",
+      "Version": "2.5",
+      "Dependencies": []
+    },
+    "EntityFramework": {
+      "Id": "EntityFramework",
+      "Version": "6.4.4",
       "Dependencies": []
     },
     "Extended.Wpf.Toolkit": {
@@ -338,6 +396,30 @@
       "Id": "interop.domino.dll",
       "Version": "1.0.0",
       "Dependencies": []
+    },
+    "Microsoft.AspNet.DynamicData.EFProvider": {
+      "Id": "Microsoft.AspNet.DynamicData.EFProvider",
+      "Version": "6.0.0",
+      "Dependencies": [
+        {
+          "Item1": "EntityFramework",
+          "Item2": "[6.0.0, )"
+        },
+        {
+          "Item1": "Microsoft.AspNet.EntityDataSource",
+          "Item2": "[6.0.0, )"
+        }
+      ]
+    },
+    "Microsoft.AspNet.EntityDataSource": {
+      "Id": "Microsoft.AspNet.EntityDataSource",
+      "Version": "6.0.0",
+      "Dependencies": [
+        {
+          "Item1": "EntityFramework",
+          "Item2": "[6.0.0, )"
+        }
+      ]
     },
     "Microsoft.AspNet.SignalR.Client": {
       "Id": "Microsoft.AspNet.SignalR.Client",
@@ -497,7 +579,7 @@
     },
     "Microsoft.Exchange.WebServices": {
       "Id": "Microsoft.Exchange.WebServices",
-      "Version": "2.2.0",
+      "Version": "2.2",
       "Dependencies": []
     },
     "Microsoft.Extensions.Configuration": {
@@ -805,6 +887,21 @@
     "UiPath": {
       "Id": "UiPath",
       "Version": "20.10.7585.27318",
+      "Dependencies": []
+    },
+    "UiPath.Credentials.Activities": {
+      "Id": "UiPath.Credentials.Activities",
+      "Version": "1.1.6479.13204",
+      "Dependencies": [
+        {
+          "Item1": "CredentialManagement",
+          "Item2": "[1.0.2, )"
+        }
+      ]
+    },
+    "UiPath.Database.Activities": {
+      "Id": "UiPath.Database.Activities",
+      "Version": "1.4.0",
       "Dependencies": []
     },
     "UiPath.Excel.Activities": {
@@ -1154,8 +1251,18 @@
     },
     {
       "Package": {
+        "Id": "CredentialManagement",
+        "Version": "1.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\credentialmanagement\\1.0.2\\lib\\net35\\CredentialManagement.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\credentialmanagement\\1.0.2"
+    },
+    {
+      "Package": {
         "Id": "CsvHelper",
-        "Version": "2.13.5"
+        "Version": "2.13.5.0"
       },
       "Assemblies": [
         "C:\\Users\\ismae\\.nuget\\packages\\csvhelper\\2.13.5\\lib\\net40-client\\CsvHelper.dll"
@@ -1165,12 +1272,23 @@
     {
       "Package": {
         "Id": "DocumentFormat.OpenXml",
-        "Version": "2.5.0"
+        "Version": "2.5"
       },
       "Assemblies": [
         "C:\\Users\\ismae\\.nuget\\packages\\documentformat.openxml\\2.5.0\\lib\\DocumentFormat.OpenXml.dll"
       ],
       "Path": "C:\\Users\\ismae\\.nuget\\packages\\documentformat.openxml\\2.5.0"
+    },
+    {
+      "Package": {
+        "Id": "EntityFramework",
+        "Version": "6.4.4"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\entityframework\\6.4.4\\lib\\net45\\EntityFramework.SqlServer.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\entityframework\\6.4.4\\lib\\net45\\EntityFramework.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\entityframework\\6.4.4"
     },
     {
       "Package": {
@@ -1267,6 +1385,26 @@
         "C:\\Users\\ismae\\.nuget\\packages\\interop.domino.dll\\1.0.0\\lib\\Interop.Domino.dll"
       ],
       "Path": "C:\\Users\\ismae\\.nuget\\packages\\interop.domino.dll\\1.0.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.AspNet.DynamicData.EFProvider",
+        "Version": "6.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.dynamicdata.efprovider\\6.0.0\\lib\\net40\\Microsoft.AspNet.DynamicData.EFProvider.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.dynamicdata.efprovider\\6.0.0"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.AspNet.EntityDataSource",
+        "Version": "6.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.entitydatasource\\6.0.0\\lib\\net40\\Microsoft.AspNet.EntityDataSource.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\microsoft.aspnet.entitydatasource\\6.0.0"
     },
     {
       "Package": {
@@ -1371,7 +1509,7 @@
     {
       "Package": {
         "Id": "Microsoft.Exchange.WebServices",
-        "Version": "2.2.0"
+        "Version": "2.2"
       },
       "Assemblies": [
         "C:\\Users\\ismae\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.Auth.dll",
@@ -1701,6 +1839,29 @@
         "C:\\Users\\ismae\\.nuget\\packages\\uipath\\20.10.7585.27318\\lib\\UiPath.Interop.dll"
       ],
       "Path": "C:\\Users\\ismae\\.nuget\\packages\\uipath\\20.10.7585.27318"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Credentials.Activities",
+        "Version": "1.1.6479.13204"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.credentials.activities\\1.1.6479.13204\\lib\\net40-client\\UiPath.Credentials.Activities.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\uipath.credentials.activities\\1.1.6479.13204"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Database.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\Microsoft.Data.ConnectionUI.Dialog.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.Design.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.Activities.dll",
+        "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities\\1.4.0\\lib\\net452\\UiPath.Database.dll"
+      ],
+      "Path": "C:\\Users\\ismae\\.nuget\\packages\\uipath.database.activities\\1.4.0"
     },
     {
       "Package": {
